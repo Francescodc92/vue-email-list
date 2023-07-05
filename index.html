@@ -20,7 +20,12 @@
 
 
     <div id="app">
-      {{ message }}
+      <h1 class="text-center my-3">Emails List</h1>
+      <ul class="list-unstyled">
+        <li v-for="email in emails">
+          {{ email }}
+        </li>
+      </ul>
     </div>
     <!--vue container-->
 
