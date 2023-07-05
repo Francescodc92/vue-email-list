@@ -22,11 +22,16 @@
     <div id="app">
       <h1 class="text-center my-3">Emails List</h1>
       <ul 
-      class="list-unstyled ms-5" >
+      class="list-unstyled ms-5" v-if="emails.length == 10">
         <li v-for="(email, index) in emails"  >
           {{index + 1}} . {{ email }}
         </li>
       </ul>
+      <div 
+        class="loading d-flex align-items-center justify-content-center"   v-else
+      >
+        <div class="loader-element"></div>
+      </div>
     </div>
     <!--vue container-->
 
